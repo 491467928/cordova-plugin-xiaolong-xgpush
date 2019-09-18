@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-xiaolong-xgpush" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-XGPush</name>
+    <js-module name="XGPush" src="www/XGPush.js">
+        <clobbers target="cordova.plugin.xiaolong.XGPush"/>
+    </js-module>
+    <preference name="android_id"/>
+    <preference name="android_key"/>
+    <preference name="ios_id"/>
+    <preference name="ios_key"/>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="XGPush">
+                <param name="ios-package" value="CDVXGPush"/>
+            </feature>
+            <preference name="ios_id" value="$IOS_ID"/>
+            <preference name="ios_key" value="$IOS_KEY"/>
+        </config-file>
+        <framework src="CoreTelephony.framework"/>
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="UserNotifications.framework"/>
+        <framework src="libz.tbd"/>
+        <framework src="libsqlite3.0.tbd"/>
+        <framework custom="true" src="src/ios/sdk/libXG-SDK.a"/>
+        <source-file src="src/ios/CDVXGPush.m"/>
+        <source-file src="src/ios/sdk/XGPush.h"/>
+    </platform>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="XGPush">
+                <param name="android-package" value="cordova.plugin.xiaolong.xgpush.XGPushPlugin"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/XGPushPlugin.java"
+                     target-dir="src/cordova/plugin/xiaolong/xgpush"/>
+        <source-file src="src/android/MessageReceiver.java"
+                     target-dir="src/cordova/plugin/xiaolong/xgpush"/>
+        <framework src="com.tencent.xinge:xinge:4.3.5-release" />
+        <framework src="com.tencent.jg:jg:1.1" />
+        <framework src="com.tencent.wup:wup:1.0.0.E-Release" />
+        <framework src="com.tencent.mid:mid:4.0.7-Release" />
+    </platform>
+</plugin>

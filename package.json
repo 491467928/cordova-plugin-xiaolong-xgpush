@@ -1,0 +1,17 @@
+{
+  "name": "xgpush",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "cordova-plugin-xiaolong-xgpush",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "xiaolong",
+  "license": "MIT"
+}
