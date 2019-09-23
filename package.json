@@ -1,17 +1,27 @@
 {
-  "name": "xgpush",
-  "version": "0.0.1",
-  "description": "",
+  "name": "cordova-plugin-xiaolong-xgpush",
+  "version": "1.0.0",
+  "description": "cordova xgpush plugin",
   "cordova": {
     "id": "cordova-plugin-xiaolong-xgpush",
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/491467928/cordova-plugin-xiaolong-xgpush.git"
   },
   "keywords": [
     "ecosystem:cordova",
-    "cordova-ios"
+    "cordova-ios",
+    "cordova-android"
   ],
   "author": "xiaolong",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/491467928/cordova-plugin-xiaolong-xgpush/issues"
+  },
+  "homepage": "https://github.com/491467928/cordova-plugin-xiaolong-xgpush#readme"
 }

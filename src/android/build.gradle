@@ -2,9 +2,9 @@ android {
     defaultConfig {
         manifestPlaceholders = [
                 XG_ACCESS_ID:"ANDROID_ACCESS_ID",
-                XG_ACCESS_KEY : "ANDROID_ACCESS_KEY"
-                // ,PACKAGE_NAME:"报名",
-                // ,HW_APPID: "华为的appid"
+                XG_ACCESS_KEY : "ANDROID_ACCESS_KEY",
+                HW_APPID: "HW_APPID",
+                PACKAGE_NAME:"PACKAGE_NAME"
         ]
     }
 }
