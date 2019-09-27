@@ -50,7 +50,7 @@ module.exports = function(context) {
 		var tmpStr=configStr.match(/id=\s*([^;]*)/)[0];
 		var strs=tmpStr.split(' ')[0].split(".");
 		var str=strs[strs.length-1];
-		return str.substr(0,str.length-1)+"-build-extras.gradle";
+		return str.substr(0,str.length-1)+"-build.gradle";
 	}
 	searchFile(getFileName(),'platforms/android/cordova-plugin-xiaolong-xgpush');
 }

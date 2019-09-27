@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-xiaolong-xgpush",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "cordova xgpush plugin",
   "cordova": {
     "id": "cordova-plugin-xiaolong-xgpush",

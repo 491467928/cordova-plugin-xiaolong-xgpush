@@ -15,8 +15,8 @@
 @implementation CDVXGPush
 
 -(void)pluginInitialize{
-    UInt32 id = [[[self.commandDelegate settings] objectForKey:@"ios_id"] unsignedIntValue];
-    NSString* key=[[self.commandDelegate settings] objectForKey:@"ios_key"];
+    UInt32 id = [[[self.commandDelegate settings] objectForKey:@"ios_xg_id"] unsignedIntValue];
+    NSString* key=[[self.commandDelegate settings] objectForKey:@"ios_xg_key"];
     if(id && key){
         [[XGPush defaultManager] startXGWithAppID:id appKey:key delegate:self];
         [[XGPush defaultManager] setEnableDebug:YES];
