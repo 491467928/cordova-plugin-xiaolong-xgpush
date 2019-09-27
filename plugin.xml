@@ -1,24 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-xiaolong-xgpush" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="cordova-plugin-xiaolong-xgpush" version="1.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-xiaolong-xgpush</name>
     <js-module name="XGPush" src="www/XGPush.js">
         <clobbers target="cordova.plugin.xiaolong.XGPush"/>
     </js-module>
-    <preference name="android_id"/>
-    <preference name="android_key"/>
+    <preference name="android_xg_id"/>
+    <preference name="android_xg_key"/>
     <preference name="hw_appId"/>
     <preference name="xiaomi_appId"/>
     <preference name="xiaomi_appKey"/>
-    <preference name="ios_id"/>
-    <preference name="ios_key"/>
+    <preference name="ios_xg_id"/>
+    <preference name="ios_xg_key"/>
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="XGPush">
                 <param name="ios-package" value="CDVXGPush"/>
             </feature>
-            <preference name="ios_id" value="$IOS_ID"/>
-            <preference name="ios_key" value="$IOS_KEY"/>
+            <preference name="ios_xg_id" value="$IOS_XG_ID"/>
+            <preference name="ios_xg_key" value="$IOS_XG_KEY"/>
         </config-file>
         <framework src="CoreTelephony.framework"/>
         <framework src="SystemConfiguration.framework"/>
@@ -40,10 +40,10 @@
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <meta-data
                     android:name="XG_ACCESS_ID"
-                    android:value="$ANDROID_ID"/>
+                    android:value="$ANDROID_XG_ID"/>
             <meta-data
                     android:name="XG_ACCESS_KEY"
-                    android:value="$ANDROID_KEY"/>
+                    android:value="$ANDROID_XG_KEY"/>
             <receiver android:name="cordova.plugin.xiaolong.xgpush.MessageReceiver"
                       android:exported="true" >
                 <intent-filter>
@@ -86,8 +86,7 @@
                     <category android:name="android.intent.category.BROWSABLE" />
 
                     <data android:scheme="xgplugin" android:host="xiaolong.xg"
-                          android:path="/notify"
-                          tools:ignore="AppLinkUrlError" />
+                          android:path="/notify" />
                 </intent-filter>
             </activity>
         </config-file>
